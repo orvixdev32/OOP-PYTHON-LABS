@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Список користувачів</title>
+</head>
+<body>
+    <h1>Зареєстровані користувачі</h1>
+
+    {% if users %}
+        {% for user in users %}
+            <div>
+                <h3>{{ user.name }}</h3>
+                <p>Email: {{ user.email }}</p>
+                <p>Повідомлення: {{ user.message }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Поки що користувачів немає.</p>
+    {% endif %}
+
+    <a href="/">Повернутися на головну</a>
+</body>
+</html>

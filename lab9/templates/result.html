@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Результат реєстрації</title>
+</head>
+<body>
+
+    <h2>Реєстрація успішна!</h2>
+
+    <p>Ім'я: {{ name }}</p>
+
+    <p>Email: {{ email }}</p>
+
+    <p>Повідомлення: {{ message }}</p>
+
+    <br>
+
+    <a href="/">Повернутися на головну</a>
+
+</body>
+</html>
